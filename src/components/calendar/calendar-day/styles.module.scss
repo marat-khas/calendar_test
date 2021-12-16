@@ -1,0 +1,44 @@
+.day {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 20px 0;
+  &_resize {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: row-resize;
+  }
+  &__hours {
+    width: 72px;
+  }
+  &__time {
+    width: 100%;
+    height: 96px;
+  }
+  &__table {
+      position: relative;
+      width: 348px;
+      width: 600px; // temp
+  }
+  &__cell {
+    position: relative;
+    width: 100%;
+    height: 96px;
+    flex: 1;
+    border-top: 1px solid rgba(194, 200, 225, 0.38);
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      margin-top: -0.5px;
+      height: 1px;
+      background-color: rgba(194, 200, 225, 0.38);
+    }
+  }
+}
