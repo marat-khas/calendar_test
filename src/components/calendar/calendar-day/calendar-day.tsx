@@ -67,7 +67,7 @@ export const CalendarDay: FC = () => {
 
   const [events, setEvents] = useState<CalendarEventData[]>(initialEvents);
   const [resizeEventId, setResizeEventId] = useState<string | null>(null);
-  
+
   const timeMatrix: CalendarEventData[][] = Array.from(
     { length: (TOTAL_HOURS * 60) / STEP },
     () => []
@@ -130,7 +130,7 @@ export const CalendarDay: FC = () => {
       });
   });
 
-  events
+  [...events]
     .sort((a, b) => {
       if (a.start === b.start) {
         return b.end - a.end;
